@@ -7,6 +7,7 @@ steps to do i.e algorithm
 4 use a for loop 
 5. print the moduli of the numbers till the last number
 '''
+
 '''
 written by Phoenixx $ Maverick
 20/02/2020
@@ -23,20 +24,16 @@ while user!=0:
     if user % 2 ==0:
         
         bina_num.append('0')
-        user=int(user/2)
+        user //= 2
         continue
     elif user%2 == 1:
         bina_num.append('1')
-        user=int(user/2)
+        user //= 2
         continue
     elif user == 1:
-        bina_num.append('1')
-        bina_num.append('1')
+        bina_num.extend(('1', '1'))
         break
-output=[]
-for a in range(0,len(bina_num)):
-	output.append(bina_num[a])
-
+output = [bina_num[a] for a in range(0,len(bina_num))]
 print('THE BINARY FORMAT  IS ',(output[::-1]))
 print('''\n___________phoenixx__________\n
 _____phurhardeen@gmail.com_________
